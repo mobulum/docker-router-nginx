@@ -1,4 +1,10 @@
-FROM nginx
+# Nginx router
+# WEBSITE https://github.com/mobulum/docker-router-nginx
+# VERSION 1.0.0
+
+FROM nginx:latest
+MAINTAINER Mateusz Stępniak "contact@mobulum.com"
+
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY default.conf.source /etc/nginx/conf.d/default.conf.source
 COPY bin/source.sh /etc/nginx/source.sh
